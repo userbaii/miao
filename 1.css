@@ -1,0 +1,72 @@
+body > :first-child {
+  color: red;
+}
+[tabindex="1"]:hover {
+  color: red;
+}
+.a:focus {
+  color: blue;
+}
+.a:active {
+  color: green;
+}
+.c > span {
+  color: red;
+}
+.c > span span {
+  color: green;
+}
+.c > span > span:nth-child(2) {
+  color: blue;
+}
+div > a:visited {
+  color: orange;
+}
+div > a:link {
+  color: pink;
+}
+[href*='@'] {
+  color: blue !important;
+}
+[href^="tel"] {
+  color: yellow !important;
+}
+[name$="pdf"] {
+  font-size: 30px;
+}
+.a > ul > :nth-child(n+4) {
+  color: red;
+}
+.a > ul > :nth-last-child(-n+3) {
+  color: black;
+}
+.b > ul > :nth-child(n+65) {
+  color: green;
+}
+.b > ul > :nth-last-child(n+76) {
+  color: red;
+}
+.b > ul > li {
+  color: blue;
+}
+.prime > ul > li:nth-child(n) {
+  color: red;
+}
+.prime > ul > li:nth-child(2n) {
+  color: black;
+}
+.prime > ul > li:nth-child(3n) {
+  color: black;
+}
+.prime > ul > li:nth-child(5n) {
+  color: black;
+}
+.prime > ul > li:nth-child(7n) {
+  color: black;
+}
+.prime > ul > li:nth-child(-2n+7) {
+  color: red;
+}
+.prime > ul > li:nth-child(2) {
+  color: red;
+}
