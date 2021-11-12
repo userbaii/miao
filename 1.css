@@ -43,11 +43,14 @@ div > a:link {
 .b > ul > :nth-child(n+65) {
   color: green;
 }
+.b > ul > :nth-child(-n+50) {
+  color: blue;
+}
+.b > ul > :nth-last-child(n+67) {
+  color: black;
+}
 .b > ul > :nth-last-child(n+76) {
   color: red;
-}
-.b > ul > li {
-  color: blue;
 }
 .prime > ul > li:nth-child(n) {
   color: red;
