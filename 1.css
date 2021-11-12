@@ -4,10 +4,10 @@ body > :first-child {
 [tabindex="1"]:hover {
   color: red;
 }
-.a:focus {
+[tabindex="1"]:focus {
   color: blue;
 }
-.a:active {
+[tabindex="1"]:active {
   color: green;
 }
 .c > span {
