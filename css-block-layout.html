@@ -28,25 +28,37 @@
       margin: 0;
     }
 
-    ul>li {
+    .first li {
       float: left;
       width: 174px;
       height: 34px;
-      margin: 15px 30px 0 0px;
+      margin: 15px 30px 0 -10px;
       border: 3px solid black;
       list-style: none;
       background-color: pink;
     }
 
-    .third {
+    .second li {
+      display: inline-block;
+      width: 174px;
+      height: 34px;
+      margin: 15px 30px 0 -15px;
+      border: 3px solid black;
+      list-style: none;
+      background-color: pink;
+    }
+
+    ul:nth-child(3n) {
       margin-right: 0;
     }
+
+
 
     li:hover {
       background-color: red;
     }
 
-    article div {
+    div div {
       border-bottom: 1px dotted #000;
     }
 
@@ -63,7 +75,7 @@
     <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
       宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
       页面主体 宽度600px</p>
-    <ul>
+    <ul class="first">
       <li>宽180高40(包含边框)</li>
       <li>产品</li>
       <li class="third">产品</li>
@@ -77,12 +89,28 @@
       <li>产品 </li>
       <li class="third">产品</li>
     </ul>
-
-    <div>link</div>
-    <div>link</div>
-    <div>link</div>
-    <div>link</div>
-    <div>link</div>
+    <br>
+    <ul class="second">
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+    </div>
   </article>
   <footer>
     <span> ©版权所有</span><br>
