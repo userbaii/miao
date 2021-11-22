@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 1000px;
-  background-image: url(glassy.jpg);
+  background-image: url(glassy-bg.jpg);
   background-repeat: no-repeat;
   background-position: calc(0, 0);
   background-attachment: fixed;
@@ -13,16 +13,24 @@ body .content {
   min-width: 600px;
   margin: auto;
   margin: 50px 10% 20% 10% ;
+  margin-bottom: 100px;
   border: 3px solid #269;
+  background-image: url(glassy-ripple.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(0, 0);
+  background-attachment: fixed;
 }
 body .content .title {
-  width: 100%;
+  width: 97%;
   height: 75px;
   line-height: 75px;
+  margin: 20px 10px 10px 10px;
+  border: 1px solid #000;
   font-family: '楷体';
   font-size: 50px;
   background-color: rgba(66, 22, 99, 0.3);
   color: #fff;
+  letter-spacing: 0.5em;
 }
 body .content h2 {
   width: 100%;
@@ -30,4 +38,10 @@ body .content h2 {
   line-height: 75px;
   color: white;
   background-color: rgba(34, 102, 153, 0.4);
+}
+body footer {
+  width: auto;
+  height: 80px;
+  min-width: 600px;
+  background-color: #fff;
 }
