@@ -1,0 +1,71 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+body .first {
+  width: 280px;
+  background-color: #eaeef3;
+  height: 100vh;
+  overflow-y: scroll;
+}
+body .first nav {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+body .first input {
+  width: 200px;
+  height: 20px;
+  border-radius: 10px 0  0 10px;
+}
+body .first button {
+  width: 50px;
+  height: 30px;
+  border-radius: 0 10px  10px  0;
+}
+body .first article ul {
+  list-style: none;
+}
+body .second {
+  position: absolute;
+  left: 280px;
+  top: 0;
+  width: 1220px;
+  height: 100vh;
+}
+body .second h2 {
+  height: 70px;
+  line-height: 70px;
+  margin: 0;
+}
+body .third {
+  position: absolute;
+  left: 1400px;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  border-left: 1px solid black;
+  background-color: #eaeef3;
+}
+body .third h2 {
+  height: 70px;
+  line-height: 70px;
+  margin: 0;
+  text-align: right;
+}
+body .last {
+  position: absolute;
+  left: 1650px;
+  top: 0;
+  width: 270px;
+  height: 100vh;
+  border-left: 1px solid black;
+  background-color: #eaeef3;
+}
+body .last h2 {
+  height: 70px;
+  line-height: 70px;
+  margin: 0;
+  text-align: right;
+}
