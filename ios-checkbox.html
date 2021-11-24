@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .elliptic {
+      position: relative;
+      display: block;
+      width: 270px;
+      height: 160px;
+      border: 1px solid rgba(110, 106, 106, .2);
+      border-radius: 80px;
+      margin: auto;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgb(119, 112, 112);
+      transition: 1s 0.3s;
+    }
+
+    .circle {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 140px;
+      height: 140px;
+      border: 1px solid rgba(110, 106, 106, .2);
+      border-radius: 70px;
+      box-shadow: 0 0 20px rgb(119, 112, 112);
+      transition: 1s 0.3s;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .white {
+      position: absolute;
+      left: 50px;
+      top: 55px;
+      width: 100px;
+      height: 50px;
+      border-radius: 70px;
+      transition: 1s 0.9s;
+      background-color: #fff;
+    }
+
+    @keyframes tochange {
+      0% {
+        width: 140px;
+      }
+
+      30% {
+        width: 160px;
+      }
+
+      50% {
+        width: 160px;
+      }
+
+      100% {
+        width: 140px;
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked+label .circle {
+      left: 130px;
+      animation-name: tochange;
+      animation-duration: 1s;
+    }
+
+    input:checked+label .white {
+      background-color: rgb(48, 243, 75);
+    }
+
+    input:checked+label {
+      background-color: rgb(48, 243, 75);
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="switch">
+  <label class="elliptic" for="switch">
+    <div class="circle"></div>>
+    <div class="white"></div>
+  </label>
+</body>
+
+</html>

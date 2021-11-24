@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body thead tr {
+  border-bottom: 2px solid #000;
+}
+body .table {
+  width: 600px;
+  border-collapse: collapse;
+  text-align: left;
+  margin: auto;
+}
+body .table th {
+  height: 50px;
+  line-height: 50px;
+}
+body .table td {
+  height: 50px;
+  line-height: 50px;
+}
+body .table tbody tr {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+body .table-dark {
+  background-color: #212529;
+  color: white;
+}
+body .table-hover:hover {
+  background-color: #323539;
+  color: white;
+}
+body .table-bordered table,
+body .table-bordered thead,
+body .table-bordered tbody,
+body .table-bordered th,
+body .table-bordered tr,
+body .table-bordered td {
+  border: 1px solid #dee2e6;
+}
+body .table-borderless thead,
+body .table-borderless tbody,
+body .table-borderless th,
+body .table-borderless tr,
+body .table-borderless td {
+  border: 0;
+}
+body .table-striped tbody tr:nth-child(odd) {
+  background-color: #c8c8c8;
+}
+body .table-sm > tr,
+body td {
+  margin: 0;
+  padding: 0;
+}
