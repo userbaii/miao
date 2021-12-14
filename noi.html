@@ -1,0 +1,216 @@
+<script id="ch0103/01">
+
+  // 输入
+  // 一行，包含两个整数A，B，中间用单个空格隔开。A和B均在整型范围内。
+  // 输出
+  // 一个整数，即A+B的值。保证结果在整型范围内。
+
+  let A = +prompt('请输入A的值');
+  let B = +prompt('请输入B的值');
+
+  console.log(A + B);
+
+</script>
+
+
+<script id="ch0103/02">
+
+  // 给定3个整数a、b、c，计算表达式(a+b)*c的值。
+
+  let a = +prompt('请输入a的值');
+  let b = +prompt('请输入b的值');
+  let c = +prompt('请输入c的值');
+
+  console.log((a + b) * c);
+
+</script>
+
+
+<script id="ch0103/03">
+
+  // 给定3个整数a、b、c，计算表达式(a+b)/c的值，/是整除运算。
+
+  let a = +prompt('请输入a的值');
+  let b = +prompt('请输入b的值');
+  let c = +prompt('请输入c的值');
+  console.log((a + b) / c);
+</script>
+
+
+
+<script id="ch0103/04">
+
+  // 给定被除数和除数，求整数商及余数。
+  // 此题中请使用默认的整除和取余运算，无需对结果进行任何特殊处理。看看程序运行结果与数学上的定义有什么不同？
+
+  let a = prompt("输入被除数的值a");
+  let b = prompt("输入除数的值b");
+
+  console.log('商是：' + (a / b), '余数是：' + (a % b));
+</script>
+
+<script id="ch0103/05">
+
+  // 两个整数a和b分别作为分子和分母，既分数 a/b ，求它的浮点数值（双精度浮点数，保留小数点后9位）
+
+  let a = +prompt("输入分子的值a");
+  let b = +prompt("输入分母的值b");
+
+  console.log((a / b).toFixed(9));
+</script>
+
+<script id="ch0103/06">
+
+  let a = +prompt("输入确诊人数a");
+  let b = +prompt("输入死亡人数b");
+
+  console.log(((a / b).toFixed(3) * 100) + '%');
+</script>
+
+<script id="ch0103/07">
+
+  // 对于多项式f(x) = ax3 + bx2 + cx + d 和给定的a, b, c, d, x，计算f(x)的值。
+
+  let x = +prompt('输入x');
+  let a = +prompt('输入a');
+  let b = +prompt('输入b');
+  let c = +prompt('输入c');
+  let d = +prompt('输入d');
+  let result = a * (x ** 3) + b * (x ** 2) + c * x + d;
+
+  // 保留到小数点后7位。
+  console.log(result.toFixed(7));
+
+</script>
+
+<script id="ch0103/08">
+
+  // 利用公式 C = 5 * (F-32) / 9 （其中C表示摄氏温度，F表示华氏温度） 进行计算转化。
+
+  let F = +prompt('输入华摄氏度')
+  let C = 5 * (F - 32) / 9;
+
+  console.log(C.toFixed(5));
+</script>
+
+<script id="ch0103/09">
+
+  // 给出圆的半径，求圆的直径、周长和面积。
+
+  const pi = 3.14159;
+  let r = +prompt('输入圆的半径');
+
+  console.log('直径是：' + (2 * r).toFixed(4), '周长是：' + (pi * r * 2).toFixed(4), '面积是' + (pi * r * r).toFixed(4));
+</script>
+
+
+
+
+<script id="ch0103/10">
+
+  // 对于阻值为r1和r2的电阻，其并联电阻阻值公式计算如下：
+  // R = 1/(1/r1 + 1/r2)
+
+  let r1 = +prompt('r1电阻值');
+  let r2 = +prompt('r2电阻值');
+  R = 1 / (1 / r1 + 1 / r2);
+
+  console.log(R.toFixed(2));
+</script>
+
+
+<script id="ch0103/11">
+
+  // 计算两个双精度浮点数a和b的相除的余数，a和b都是正数的。这里余数（r）的定义是：a = k * b + r，其中 k是整数， 0 <= r < b。
+
+  let a = +prompt('输入a');
+  let b = +prompt('输入b');
+
+  console.log(a % b);
+</script>
+
+
+<script id="ch0103/12">
+  //   对于半径为r的球，其体积的计算公式为V=4/3*πr3，这里取π= 3.14。
+  // 现给定r，求V。
+
+  let r = +prompt('输入球半径r');
+  const pi = 3.14159;
+  let V = 4 / 3 * pi * (r ** 3);
+  console.log(V);
+</script>
+
+
+<script id="ch0103/13">
+  // 将一个三位数反向输出。
+  let num = prompt('输入三位数');
+  let arr = num.split()
+  console.log(arr.reverse().join());
+
+
+
+</script>
+
+
+<script id="ch0103/14">
+
+  // 一只大象口渴了，要喝20升水才能解渴，但现在只有一个深h厘米，底面半径为r厘米的小圆桶(h和r都是整数)。问大象至少要喝多少桶水才会解渴。
+
+  const pi = 3.14159;
+
+  let h = +prompt('h');
+  let r = +prompt('r');
+  let V = pi * r * r * h * 0.001;
+  console.log(Math.ceil(V));
+</script>
+
+
+<script id="ch0103/15">
+  // 你买了一箱n个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每x小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，那么经过y小时你还有多少个完整的苹果？
+
+  let n = prompt('大于1的数');
+  let x = prompt('虫子每x小时能吃掉一个苹果x');
+  let y = prompt('经过y小时');
+
+  n = Math.floor(n - (y / x));
+  console.log(n > 0 ? n : 0);
+</script>
+
+
+<script id="ch0103/16">
+  // 已知线段的两个端点的坐标A（Xa, Ya），B（Xb，Yb），求线段AB的长度。
+  let Xa = +prompt('Xa坐标');
+  let Ya = +prompt('Ya坐标');
+  let Xb = +prompt('Xb坐标');
+  let Yb = +prompt('Yb坐标');
+
+  let length = (((Xa * Xa) + (Ya * Ya)) - ((Xb * Xb) + (Yb * Yb))) ** 2 ** (-4);
+  console.log('线段AB长度' + length);
+</script>
+
+
+<script id="ch0103/17">
+  // 平面上有一个三角形，它的三个顶点坐标分别为(x1, y1), (x2, y2), (x3, y3)，那么请问这个三角形的面积是多少。
+</script>
+
+
+<script id="ch0103/18">
+  // 给出一个等差数列的前两项a1，a2，求第n项是多少。
+  let a1 = +prompt('a1');
+  let a2 = +prompt('a2');
+  let n = +prompt('n');
+  const d = a2 - a1;
+  console.log(a1 + (n - 1) * d);
+</script>
+
+<script id="ch0103/19">
+  let A = +prompt('A的值');
+  let B = +prompt('B的值');
+  console.log(A * B);
+</script>
+
+
+<script id="ch0103/20">
+  let n = +prompt('n');
+  console.log(2 ** n);
+</script>
