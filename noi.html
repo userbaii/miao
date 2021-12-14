@@ -43,8 +43,8 @@
   // 给定被除数和除数，求整数商及余数。
   // 此题中请使用默认的整除和取余运算，无需对结果进行任何特殊处理。看看程序运行结果与数学上的定义有什么不同？
 
-  let a = prompt("输入被除数的值a");
-  let b = prompt("输入除数的值b");
+  let a = +prompt("输入被除数的值a");
+  let b = +prompt("输入除数的值b");
 
   console.log('商是：' + (a / b), '余数是：' + (a % b));
 </script>
@@ -64,7 +64,7 @@
   let a = +prompt("输入确诊人数a");
   let b = +prompt("输入死亡人数b");
 
-  console.log(((a / b).toFixed(3) * 100) + '%');
+  console.log(((b / a).toFixed(3) * 100) + '%');
 </script>
 
 <script id="ch0103/07">
@@ -136,7 +136,7 @@
 
   let r = +prompt('输入球半径r');
   const pi = 3.14159;
-  let V = 4 / 3 * pi * (r ** 3);
+  let V = (4 / 3) * pi * (r ** 3);
   console.log(V);
 </script>
 
@@ -144,9 +144,8 @@
 <script id="ch0103/13">
   // 将一个三位数反向输出。
   let num = prompt('输入三位数');
-  let arr = num.split()
-  console.log(arr.reverse().join());
-
+  let arr = num.split('').reverse().join('');
+  console.log(arr);
 
 
 </script>
@@ -161,7 +160,7 @@
   let h = +prompt('h');
   let r = +prompt('r');
   let V = pi * r * r * h * 0.001;
-  console.log(Math.ceil(V));
+  console.log(Math.ceil(20 / V));
 </script>
 
 
@@ -184,7 +183,7 @@
   let Xb = +prompt('Xb坐标');
   let Yb = +prompt('Yb坐标');
 
-  let length = (((Xa * Xa) + (Ya * Ya)) - ((Xb * Xb) + (Yb * Yb))) ** 2 ** (-4);
+  let length = ((Xa - Xb) ** 2 + (Ya - Yb) ** 2) ** (2 ** (-1));
   console.log('线段AB长度' + length);
 </script>
 
