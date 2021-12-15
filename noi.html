@@ -320,7 +320,7 @@
 <script id="ch0104/08">
   // 判断一个数n 能否同时被3和5整除
   let n = Number(prompt('一个数n'));
-  ((n % 3) && (n % 5)) ? console.log('YES') : console.log('NO');
+  ((n % 3 == 0) && (n % 5 == 0)) ? console.log('YES') : console.log('NO');
 </script>
 
 <script id="ch0104/09">
@@ -461,9 +461,9 @@
   // 判断某年是否是闰年。
   let year = Number(prompt('输入一个整数'));
   if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-    console.log('是闰年');
+    console.log('Y');
   } else {
-    console.log('是平年');
+    console.log('N');
   }
 </script>
 <script id="ch0104/18">
@@ -488,7 +488,7 @@
     console.log(a - b);
   } else if (comput = '*') {
     console.log(a * b);
-  } if (comput = '/') {
+  } else if (comput = '/') {
     if (b == 0) {
       console.log('Divided by zero!');
     } else {
@@ -505,15 +505,15 @@
   let c = Number(prompt('输入c'));
   if (b * b === (4 * a * c)) {
     let x1 = x2 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
-    console.log(x1.toFixed(5) + ' ' + x2.toFixed(5));
+    console.log('x1' + '=' + x1.toFixed(5) + ' ' + 'x2' + '=' + x2.toFixed(5));
   } else if (b * b > (4 * a * c)) {
     let x1 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
     let x2 = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
-    console.log(x1.Math.toFixed(5) + ' ' + x2.toFixed(5));
+    console.log('x1' + '=' + x1.Math.toFixed(5) + ' ' + 'x2' + '=' + x2.toFixed(5));
   } else {
     let x1 = (-b / (2 * a)).toFixed(5) + '+' + String((Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)) + 'i';
     let x2 = (-b / (2 * a)).toFixed(5) + '-' + String((Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)) + 'i';
-    console.log(x1 + ' ' + x2);
+    console.log('x1' + '=' + x1 + ' ' + 'x2' + '=' + x2);
   }
 </script>
 <script id="ch0104/21">
