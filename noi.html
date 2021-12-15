@@ -33,7 +33,9 @@
   let a = +prompt('请输入a的值');
   let b = +prompt('请输入b的值');
   let c = +prompt('请输入c的值');
-  console.log((a + b) / c);
+
+  result = (a + b) / c;
+  console.log(result);
 </script>
 
 
@@ -46,7 +48,7 @@
   let a = +prompt("输入被除数的值a");
   let b = +prompt("输入除数的值b");
 
-  console.log('商是：' + (a / b), '余数是：' + (a % b));
+  console.log('商是：' + Math.floor(a / b), '余数是：' + (a % b));
 </script>
 
 <script id="ch0103/05">
@@ -135,7 +137,7 @@
   // 现给定r，求V。
 
   let r = +prompt('输入球半径r');
-  const pi = 3.14159;
+  const pi = 3.14;
   let V = (4 / 3) * pi * (r ** 3);
   console.log(V);
 </script>
@@ -184,12 +186,26 @@
   let Yb = +prompt('Yb坐标');
 
   let length = ((Xa - Xb) ** 2 + (Ya - Yb) ** 2) ** (2 ** (-1));
-  console.log('线段AB长度' + length);
+  console.log('线段AB长度' + length.toFixed(2));
 </script>
 
 
 <script id="ch0103/17">
   // 平面上有一个三角形，它的三个顶点坐标分别为(x1, y1), (x2, y2), (x3, y3)，那么请问这个三角形的面积是多少。
+  let X1 = +prompt('X1坐标');
+  let Y1 = +prompt('Y1坐标');
+  let X2 = +prompt('X2坐标');
+  let Y2 = +prompt('Y2坐标');
+  let X3 = +prompt('X3坐标');
+  let Y3 = +prompt('Y3坐标');
+  let length1 = ((X1 - X2) ** 2 + (Y1 - Y2) ** 2) ** (2 ** (-1));
+  let length2 = ((X3 - X2) ** 2 + (Y3 - Y2) ** 2) ** (2 ** (-1));
+  let length3 = ((X3 - X1) ** 2 + (Y3 - Y1) ** 2) ** (2 ** (-1));
+  let p = (length1 + length2 + length3) / 2;
+  let S = (p * (p - length1) * (p - length2) * (p - length3)) * (2 ** (-1));
+
+  console.log(S);
+
 </script>
 
 
