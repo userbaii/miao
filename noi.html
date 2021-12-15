@@ -229,3 +229,303 @@
   let n = +prompt('n');
   console.log(2 ** n);
 </script>
+
+<script id="ch0104/01">
+
+  // 如果N > 0, 输出positive;
+  // 如果N = 0, 输出zero;
+  // 如果N < 0, 输出negative
+  let N = prompt('N');
+  if (N > 0) {
+    console.log('positive');
+  } else if (N < 0) {
+    console.log('negative');
+  } else {
+    console.log('zero');
+  }
+</script>
+
+<script id="ch0104/02">
+  // 输入一个浮点数，输出这个浮点数的绝对值。
+  let n = Number(prompt('输入n不等于0'));
+  if (n > 0) {
+    console.log(n);
+  } else {
+    console.log(-n);
+  }
+</script>
+
+<script id="ch0104/03">
+  // 给定一个整数，判断该数是奇数还是偶数。
+  let num = prompt('给定一个整数');
+  if (num % 2 == 0) {
+    console.log('even');
+  } else {
+    console.log('odd');
+  }
+</script>
+
+<script id="ch0104/04">
+  // 任意输入一个字符，判断其ASCII是否是奇数，若是，输出YES，否则，输出NO
+  let res = prompt(' 任意输入一个字符');
+  if (res.charCodeAt() % 2) {
+    console.log('YES');
+  } else {
+    console.log('NO');
+  }
+
+</script>
+
+<script id="ch0104/05">
+  // 输入两个整数，比较它们的大小。
+  let x = Number(prompt('x'));
+  let y = Number(prompt('y'));
+  if (x > y) {
+    console.log('>');
+  } else if (x < y) {
+    console.log('<');
+  } else {
+    console.log('=');
+  }
+</script>
+
+<script id="ch0104/06">
+
+  // 判断一个正整数是否是两位数（即大于等于10且小于等于99）
+
+  let num = Number(prompt('输入一个数'));
+  if (num >= 10 && num <= 100) {
+    console.log('1');
+  } else {
+    console.log('0');
+  }
+</script>
+
+<script id="ch0104/07">
+  // 某饮料公司最近推出了一个“收集瓶盖赢大奖”的活动：如果你拥有10个印有“幸运”、或20个印有“鼓励”的瓶盖，就可以兑换一个神秘大奖。
+
+  // 现分别给出你拥有的印有“幸运”和“鼓励”的瓶盖数，判断是否可以去兑换大奖。
+
+  let lucky = Number(prompt('印有“幸运”'));
+  let encourage = Number(prompt('印有“鼓励”'));
+
+  if (lucky >= 10 || encourage >= 20) {
+    console.log(1);
+  } else {
+    console.log(0);
+  }
+</script>
+
+
+<script id="ch0104/08">
+  // 判断一个数n 能否同时被3和5整除
+  let n = Number(prompt('一个数n'));
+  ((n % 3) && (n % 5)) ? console.log('YES') : console.log('NO');
+</script>
+
+<script id="ch0104/09">
+
+
+  // 给定一个整数，判断它能否被3，5，7整除，并输出以下信息：
+  // 1、能同时被3，5，7整除（直接输出3 5 7，每个数中间一个空格）；
+  // 2、只能被其中两个数整除（输出两个数，小的在前，大的在后。例如：3 5或者 3 7或者5 7,中间用空格分隔）；
+  // 3、只能被其中一个数整除（输出这个除数）；
+  // 4、不能被任何数整除，输出小写字符‘n’,不包括单引号。
+
+  let num = Number(prompt('给定一个整数'));
+  if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0) {
+    console.log('3' + ' ' + '5' + ' ' + '7');
+  } else if (num % 3 == 0 && num % 5 == 0 && num % 7 != 0) {
+    console.log('3' + '  ' + '5');
+  } else if (num % 3 != 0 && num % 5 == 0 && num % 7 == 0) {
+    console.log('5' + ' ' + '7');
+  } else if (num % 3 == 0 && num % 7 == 0 && num % 5 != 0) {
+    console.log('3' + ' ' + '7');
+  } else if (num % 3 == 0 && num % 5 != 0 && num % 7 != 0) {
+    console.log('3');
+  } else if (num % 3 != 0 && num % 5 == 0 && num % 7 != 0) {
+    console.log('5');
+  } else if (num % 3 != 0 && num % 5 != 0 && num % 7 == 0) {
+    console.log('7');
+  } else {
+    console.log('n');
+  }
+</script>
+<script id="ch0104/10">
+  // 给出一名学生的语文和数学成绩，判断他是否恰好有一门课不及格（成绩小于60分）。
+  let chinese = Number(prompt('语文'));
+  let math = Number(prompt('数学'));
+  if ((chinese >= 60) && (math < 60) || (chinese < 60) && (math >= 60)) {
+    console.log(1);
+  } else {
+    console.log(0);
+  }
+</script>
+<script id="ch0104/11">
+  // 晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的1、3、5有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出YES；如果不能则输出NO。
+  let date = Number(prompt('周几'))
+  if (date === 1 || date === 3 || date === 5) {
+    console.log('NO');
+  } else {
+    console.log('YES');
+  }
+</script>
+<script id="ch0104/12">
+  // 在北大校园里,没有自行车,上课办事会很不方便.但实际上,并非去办任何事情都是骑车快,因为骑车总要找车、开锁、
+  // 停车、锁车等,这要耽误一些时间.假设找到自行车,开锁并车上自行车的时
+  // 间为27秒;停车锁车的时间为23秒;步行每秒行走1.2米,骑车每秒行走3.0米。请判断走不同的距离去办事,是骑车快还是走路快。
+
+  let distance = Number(prompt('输入距离'));
+  let walk = Math.floor(distance / 1.2);
+  let bike = 50 + (distance / 3);
+  if (walk > bike) {
+    console.log('Bike');
+  } else if (walk < bike) {
+    console.log('Walk');
+  } else {
+    console.log('ALL');
+  }
+</script>
+<script id="ch0104/13">
+  //   编写程序，计算下列分段函数y=f(x)的值。
+  // y=-x+2.5; 0 <= x < 5
+  // y=2-1.5(x-3)(x-3); 5 <= x < 10
+  // y=x/2-1.5; 10 <= x < 20
+
+  let N = Number(prompt('一个浮点数N,0 <= N < 20'));
+  if (0 <= N < 5) {
+    y = -N + 2.5;
+    console.log(y.toFixed(3));
+  } else if (5 <= N < 10) {
+    y = 2 - 1.5 * (N - 3) * (N - 3);
+    console.log(y.toFixed(3));
+  } else {
+    y = N / 2 - 1.5;
+    console.log(y.toFixed(3));
+  }
+</script>
+<script id="ch0104/14">
+  // 根据邮件的重量和用户是否选择加急计算邮费。计算规则：重量在1000克以内(包括1000克), 基本费8元。超过1000克的部分，每500克加收超重费4元，
+  // 不足500克部分按500克计算；如果用户选择加急，多收5元。
+  let weight = Number(prompt('邮件的重量'));
+  let Urgent = prompt('y:加急，n:不加急', 'y');
+  if (weight <= 1000) {
+    if (Urgent === 'y') {
+      price = 8 + 5;
+      console.log(price);
+    } else {
+      price = 8;
+      console.log(price);
+    }
+  } else {
+    if (Urgent === 'y') {
+      price = 8 + 5 + (Math.ceil((weight - 1000) / 500)) * 4;
+      console.log(price);
+    } else {
+      price = 8 + (Math.ceil((weight - 1000) / 500)) * 4;
+      console.log(price);
+    }
+  }
+</script>
+<script id="ch0104/15">
+  // 输入三个整数,输出最大的数。
+  let a = Number(prompt('输入一个整数'));
+  let b = Number(prompt('输入一个整数'));
+  let c = Number(prompt('输入一个整数'));
+  if (a > b) {
+    if (a > c) {
+      console.log(a);
+    } else {
+      console.log(c);
+    }
+  } else {
+    if (b > c) {
+      console.log(b);
+    } else {
+      console.log(c);
+    }
+  }
+</script>
+<script id="ch0104/16">
+  // 给定三个正整数，分别表示三条线段的长度，判断这三条线段能否构成一个三角形。
+  let a = Number(prompt('输入一个整数'));
+  let b = Number(prompt('输入一个整数'));
+  let c = Number(prompt('输入一个整数'));
+  if (((a + b) > c) || ((b + c) > a) || ((a + c) > b)) {
+    console.log('yes');
+  } else {
+    console.log('no');
+  }
+</script>
+<script id="ch0104/17">
+  // 判断某年是否是闰年。
+  let year = Number(prompt('输入一个整数'));
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+    console.log('是闰年');
+  } else {
+    console.log('是平年');
+  }
+</script>
+<script id="ch0104/18">
+  // 有一个正方形，四个角的坐标（x,y)分别是（1，-1），（1，1），（-1，-1），（-1，1），x是横轴，y是纵轴。写一个程序，
+  // 判断一个给定的点是否在这个正方形内（包括正方形边界）。
+  let x = Number(prompt('x坐标'));
+  let y = Number(prompt('y坐标'));
+  if ((1 >= x >= -1) && (1 >= y >= -1)) {
+    console.log('yes');
+  } else {
+    console.log('no');
+  }
+</script>
+<script id="ch0104/19">
+  // 输入只有一行，共有三个参数，其中第1、2个参数为整数，第3个参数为操作符（+,-,*,/）。
+  let a = Number(prompt('输入一个整数'));
+  let b = Number(prompt('输入一个整数'));
+  let comput = prompt('+,-,*,/');
+  if (comput = '+') {
+    console.log(a + b);
+  } else if (comput = '-') {
+    console.log(a - b);
+  } else if (comput = '*') {
+    console.log(a * b);
+  } if (comput = '/') {
+    if (b == 0) {
+      console.log('Divided by zero!');
+    } else {
+      console.log(a / b);
+    }
+  } else {
+    console.log('Invalid operator!');
+  }
+</script>
+<script id="ch0104/20">
+  // 输入一行，包含三个浮点数a, b, c（它们之间以一个空格分开），分别表示方程ax2 + bx + c =0的系数。
+  let a = Number(prompt('输入a'));
+  let b = Number(prompt('输入b'));
+  let c = Number(prompt('输入c'));
+  if (b * b === (4 * a * c)) {
+    let x1 = x2 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
+    console.log(x1.toFixed(5) + ' ' + x2.toFixed(5));
+  } else if (b * b > (4 * a * c)) {
+    let x1 = (-b + Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
+    let x2 = (-b - Math.sqrt(b ** 2 - 4 * a * c)) / (2 * a);
+    console.log(x1.Math.toFixed(5) + ' ' + x2.toFixed(5));
+  } else {
+    let x1 = (-b / (2 * a)).toFixed(5) + '+' + String((Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)) + 'i';
+    let x2 = (-b / (2 * a)).toFixed(5) + '-' + String((Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5)) + 'i';
+    console.log(x1 + ' ' + x2);
+  }
+</script>
+<script id="ch0104/21">
+  // 你买了一箱n个苹果，很不幸的是买完时箱子里混进了一条虫子。虫子每x小时能吃掉一个苹果，假设虫子在吃完一个苹果之前不会吃另一个，
+  // 那么经过y小时你还有多少个完整的苹果？
+  let n = Number(prompt('输入n'));
+  let x = Number(prompt('输入x'));
+  let y = Number(prompt('输入y'));
+  let res = Math.ceil(y / x);
+  if (n > res) {
+    console.log(n - res);
+  } else {
+    console.log(0);
+  }
+</script>
