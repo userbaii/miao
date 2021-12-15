@@ -529,3 +529,194 @@
     console.log(0);
   }
 </script>
+
+
+<script id="ch0105/1">
+  // 班上有学生若干名，给出每名学生的年龄（整数），求班上所有学生的平均年龄，保留到小数点后两位。
+  //  第一行有一个整数n（1<= n <= 100），表示学生的人数。其后n行每行有1个整数，表示每个学生的年龄，取值为15到25。
+  let n = Number(prompt('学生的人数'));
+  let sum = 0;
+  let age;
+  for (let i = 1; i <= n; i++) {
+    age = Number(prompt('输入第' + i + '个学生年龄'));
+    sum = sum + age;
+  }
+  let average = (sum / n).toFixed(2);
+  console.log(average);
+</script>
+
+<script id="ch0105/2">
+  // 输入包含12行，每行包含一个数，为某个月的结余。每个数都是不大于1,000,000的正数，保留两位小数，省略"$"符。
+  const month = 12;
+  let sum = 0;
+  let balance;
+  for (let i = 1; i <= month; i++) {
+    balance = Number(prompt(i + '月的结余'));
+    sum += balance;
+  }
+  let average = (sum / month).toFixed(2);
+  console.log('$' + average);
+</script>
+
+<script id="ch0105/3">
+  // 输入有两行，第一行包含一个整数n（n小于100），代表样本容量；第二行包含n个绝对值不超过1000的浮点数，代表各个样本数据。
+  let n = Number(prompt('输入n'));
+  let sum = 0;
+  let dataNum;
+  for (let i = 1; i <= n; i++) {
+    dataNum = Number(prompt(i + '个样本数据'));
+    sum += dataNum;
+  }
+  let average = (sum / n).toFixed(4);
+  console.log(average);
+</script>
+
+<script id="ch0105/4">
+  // 读入n（1 <= n <= 10000）个整数，求它们的和与均值。
+  let n = Number(prompt('输入n'));
+  let sum = 0;
+  let num;
+  for (let i = 1; i <= n; i++) {
+    num = Number(prompt(i + '个整数'));
+    sum += num;
+  }
+  let average = sum / n;
+  console.log(sum + '' + average);
+</script>
+
+<script id="ch0105/5">
+  // 孙老师讲授的《计算概论》这门课期中考试刚刚结束，他想知道考试中取得的最高分数。因为人数比较多，
+  // 他觉得这件事情交给计算机来做比较方便。你能帮孙老师解决这个问题吗？
+  let n = Number(prompt('输入学生人数'));
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr[i - 1] = Number(prompt('输入第' + i + '学生成绩'));
+  }
+  let max = arr[0];
+  for (let i = 1; i <= arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  console.log(max);
+</script>
+
+<script id="ch0105/6">
+  // 给定一个长度为n的非负整数序列，请计算序列的最大跨度值（最大跨度值 = 最大值减去最小值）。
+  let n = Number(prompt('给定一个长度为n的非负整数序列'));
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr[i - 1] = Number(prompt('输入第' + i + '值'));
+  }
+  let max = arr[0];
+  for (let i = 1; i <= arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  let min = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  console.log(max - min);
+</script>
+
+<script id="ch0105/7">
+  // 2008年北京奥运会，A国的运动员参与了n天的决赛项目(1≤n≤17)。现在要统计一下A国所获得的金、银、铜牌数目及总奖牌数。
+  let n = Number(prompt('A国的运动员参与了n天的决赛项目'));
+  let gold;
+  let silver;
+  let copper;
+  let sum_gold = 0;
+  let sum_silver = 0;
+  let sum_copper = 0;
+  let sum;
+  for (let i = 1; i <= n; i++) {
+    gold = Number(prompt('第' + i + '天金牌数'));
+    silver = Number(prompt('第' + i + '天银牌数'));
+    copper = Number(prompt('第' + i + '天铜牌数'));
+    sum_gold += gold;
+    sum_silver += silver;
+    sum_copper += copper;
+  }
+  sum = sum_gold + sum_silver + sum_copper;
+  console.log(sum_gold + ' ' + sum_silver + ' ' + sum_copper + ' ' + sum);
+</script>
+
+<script id="ch0105/8"></script>
+
+<script id="ch0105/9"></script>
+
+<script id="ch0105/10"></script>
+
+<script id="ch0105/11"></script>
+
+<script id="ch0105/12"></script>
+
+<script id="ch0105/13"></script>
+
+<script id="ch0105/14"></script>
+
+<script id="ch0105/15"></script>
+
+<script id="ch0105/16"></script>
+
+<script id="ch0105/17"></script>
+
+<script id="ch0105/18"></script>
+
+<script id="ch0105/19"></script>
+
+<script id="ch0105/20"></script>
+
+<script id="ch0105/21"></script>
+
+<script id="ch0105/22"></script>
+
+<script id="ch0105/23"></script>
+
+<script id="ch0105/24"></script>
+
+<script id="ch0105/25"></script>
+
+<script id="ch0105/26"></script>
+
+<script id="ch0105/27"></script>
+
+<script id="ch0105/28"></script>
+
+<script id="ch0105/29"></script>
+
+<script id="ch0105/30"></script>
+
+<script id="ch0105/31"></script>
+
+<script id="ch0105/32"></script>
+
+<script id="ch0105/33"></script>
+
+<script id="ch0105/34"></script>
+
+<script id="ch0105/35"></script>
+
+<script id="ch0105/36"></script>
+
+<script id="ch0105/37"></script>
+
+<script id="ch0105/38"></script>
+
+<script id="ch0105/39"></script>
+
+<script id="ch0105/40"></script>
+
+<script id="ch0105/41"></script>
+
+<script id="ch0105/42"></script>
+
+<script id="ch0105/43"></script>
+
+<script id="ch0105/44"></script>
+
+<script id="ch0105/45"></script>
