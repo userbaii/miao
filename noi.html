@@ -66,7 +66,7 @@
   let a = +prompt("输入确诊人数a");
   let b = +prompt("输入死亡人数b");
 
-  console.log(((b / a).toFixed(3) * 100) + '%');
+  console.log(((b / a).toFixed(5) * 100) + '%');
 </script>
 
 <script id="ch0103/07">
@@ -186,7 +186,7 @@
   let Yb = +prompt('Yb坐标');
 
   let length = Math.sqrt(((Xa - Xb) ** 2 + (Ya - Yb) ** 2));
-  console.log(length.toFixed(2));
+  console.log(length.toFixed(3));
 </script>
 
 
@@ -204,7 +204,7 @@
   let p = (length1 + length2 + length3) / 2;
   let S = Math.sqrt(p * (p - length1) * (p - length2) * (p - length3));
 
-  console.log(S);
+  console.log(S.toFixed(2));
 
 </script>
 
