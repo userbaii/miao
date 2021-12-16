@@ -861,10 +861,14 @@
   let sum = h;
   for (let i = 1; i <= 10; i++) {
     h = h / 2;
-    sum = sum + h * 2;
+    if (i < 10) {
+      sum = sum + h * 2;
+    }
+
     if (i == 10) {
       console.log(sum.toFixed(4) + ' ' + h.toFixed(7));
     }
+
   }
 </script>
 
@@ -961,18 +965,18 @@
   let n = Number(prompt('输入一个正整数n'));
   let arr = [2];
   let num = 1;
-  primes:
+
   for (let i = 2; i < 10000; i++) {
-    primes1:
+
     for (let j = 2; j <= i; j++) {
       if (i % j == 0) {
-        continue primes;
+        break;
       } else {
         if (j > (i - 2)) {
           arr[num] = i;
           num++;
         } else {
-          continue primes1;
+          continue;
         }
       }
     }
@@ -996,7 +1000,7 @@
       } else {
         money = money + i;
         day++;
-        console.log(day);
+
       }
     }
 
