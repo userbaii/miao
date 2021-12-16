@@ -773,7 +773,7 @@
   let M = Number(prompt('现有总值为M的钱'));
   let Y = Number(prompt('投资Y年'));
   for (let i = 1; i <= Y; i++) {
-    M = M + M * R;
+    M = M + M * R * 0.01;
   }
   console.log(Math.floor(M));
 </script>
@@ -788,10 +788,6 @@
   foo:
   for (let i = 1; sum < house; i++) {
     sum = sum + N;
-    house = house + house * (K * 0.01);
-    console.log(i);
-    console.log(sum);
-    console.log(house);
     if (sum >= house) {
       console.log(i);
       break;
@@ -800,6 +796,7 @@
       console.log('Impossible');
       break;
     }
+    house = house + house * (K * 0.01);
   }
 </script>
 
@@ -861,14 +858,12 @@
   // 一球从某一高度落下（整数，单位米），每次落地后反跳回原来高度的一半，再落下。
   // 编程计算气球在第10次落地时，共经过多少米 ? 第10次反弹多高？
   let h = Number(prompt('某一高度'));
-  let sum = 0;
+  let sum = h;
   for (let i = 1; i <= 10; i++) {
-    sum = sum + h;
     h = h / 2;
+    sum = sum + h * 2;
     if (i == 10) {
-
-      console.log(sum);
-      console.log(h);
+      console.log(sum.toFixed(4) + ' ' + h.toFixed(7));
     }
   }
 </script>
@@ -882,7 +877,7 @@
       console.log(N + '/' + '2' + '=' + (N / 2));
       N = N / 2;
       if (N == 1) {
-        console.log('END');
+        console.log('End');
         break;
       }
     } else {
@@ -913,7 +908,7 @@
       console.log('-' + i);
       break;
     } else if (i == 12) {
-      console.log(mom * 1.2);
+      console.log(mom * 1.2 + sum);
     }
   }
 
