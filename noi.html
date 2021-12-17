@@ -1105,7 +1105,7 @@
   for (let i = 1; i <= n; i++) {
     sum = sum + ((-1) ** (i - 1)) * (1 / i)
   }
-  console.log(sum);
+  console.log(sum.toFixed(4));
 </script>
 
 <script id="ch0105/34">
@@ -1165,7 +1165,6 @@
   let sum = 0;
   for (let i = 1; i <= n; i++) {
     arr7 = String(i).split('');
-    console.log(i);
     for (let j = 0; j < arr7.length; j++) {
       if (arr7[j] == 7 || i % 7 == 0) {
         break;
@@ -1193,9 +1192,7 @@
   let n = Number(prompt('输入一个正整数n'));
   let arr = [2];
   let num = 1;
-
-  for (let i = 2; i < 10000; i++) {
-
+  for (let i = 3; i < 10000; i++) {
     for (let j = 2; j <= i; j++) {
       if (i % j == 0) {
         break;
