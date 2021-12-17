@@ -918,39 +918,265 @@
 
 </script>
 
-<script id="ch0105/23"></script>
+<script id="ch0105/23">
+  // 第一行是每天开始时的药品总量m
+  // 第二行是这一天取药的人数n（0 < n <= 100）
+  // 第三行共有n个数，分别记录了每个病人希望取走的药品数量（按照时间先后的顺序），两数之间以空格分隔
+  let m = Number(prompt('每天开始时的药品总量m'));
+  let n = Number(prompt('这一天取药的人数n'));
+  let arr = [];
+  let no_med = 0;
+  for (let i = 0; i < n; i++) {
+    arr[i] = Number(prompt('第' + (i + 1) + '个病人希望取走的药品数量'));
+    if (arr[i] > m) {
+      no_med++;
+    } else {
+      m = m - arr[i];
+    }
+  }
+  console.log(no_med);
+</script>
 
-<script id="ch0105/24"></script>
+<script id="ch0105/24">
+  // 第一行为一个正整数n，n < 100其后有n行，每行2个正整数，分别为一次测量的收缩压和舒张压，中间以一个空格分隔。
+  let n = Number(prompt('正整数n'));
+  let arrx = [];  //收缩压
+  let arry = [];  //舒张压
+  let hours = 0;
+  for (let i = 0; i < n; i++) {
+    arrx[i] = Number(prompt('第' + (i + 1) + '个收缩压'));
+    arry[i] = Number(prompt('第' + (i + 1) + '个舒张压'));
+    if (((140 >= arrx[i]) && (arrx[i] >= 90)) && ((90 >= arry[i]) && (arry[i] >= 60))) {
+      hours++;
+    } else {
+      hours = 0;
+    }
+  }
+  console.log(hours);
+</script>
 
-<script id="ch0105/25"></script>
+<script id="ch0105/25">
+  // 一个十进制自然数,它的七进制与九进制表示都是三位数，且七进制与九进制的三位数码表示顺序正好相反。编程求此自然数,并输出显示。
 
-<script id="ch0105/26"></script>
+</script>
 
-<script id="ch0105/27"></script>
+<script id="ch0105/26">
+  // 给定若干个四位数，求出其中满足以下条件的数的个数：个位数上的数字减去千位数上的数字，再减去百位数上的数字， 再减去十位数上的数字的结果大于零。
+  let n = Number(prompt('正整数n'));
+  let arr = [];
+  let num_max;
+  let sum = 0;
+  for (let i = 0; i < n; i++) {
+    arr[i] = Number(prompt('第' + (i + 1) + '个四位数'));
+    num_max = (Math.floor(arr[i] - Math.floor(arr[i] / 10) * 10)) - (Math.floor(arr[i] / 1000) + Math.floor((arr[i] / 100) - Math.floor(arr[i] / 1000) * 10) + (Math.floor(arr[i] / 10) - Math.floor(arr[i] / 100) * 10))
+    if (num_max > 0) {
+      sum++;
+    }
+  }
+  console.log(sum);
+</script>
 
-<script id="ch0105/28"></script>
+<script id="ch0105/27">
+  // 已知：Sn = 1＋1／2＋1／3＋…＋1／n。显然对于任意一个整数K，当n足够大的时候，Sn大于K。  现给出一个整数K（1 <= k <= 15），要求计算出一个最小的n；使得Sn＞K。
+  let k = Number(prompt('正整数k'));
+  let Sn = 0;
+  let m;
+  for (let i = 1; ; i++) {
+    m = 1 / i;
+    Sn = Sn + m;
+    if (Sn > k) {
+      console.log(i);
+      break;
+    }
+  }
 
-<script id="ch0105/29"></script>
+</script>
 
-<script id="ch0105/30"></script>
+<script id="ch0105/28">
+  // 给定一个整数，要求从个位开始分离出它的每一位数字。
+  let n = prompt('正整数n');
+  let n_reverse = n.split('').reverse().join(' ');
+  console.log(n_reverse);
 
-<script id="ch0105/31"></script>
+</script>
 
-<script id="ch0105/32"></script>
+<script id="ch0105/29">
+  let n = prompt('整数n');
+  let n_reverse = n.split('').reverse();
+  if (n > 0) {
+    for (let i = 0; i < n_reverse.length; i++) {
+      if (n_reverse[0] == 0) {
+        n_reverse.shift();
+      } else {
+        break;
+      }
+    }
+    console.log(n_reverse.join(''));
+  } else if (n < 0) {
+    for (let i = 0; i < n_reverse.length; i++) {
+      if (n_reverse[0] == 0) {
+        n_reverse.shift();
+        n_reverse.pop();
+      } else {
+        break;
+      }
+    }
+    console.log('-' + n_reverse.join(''));
+  } else {
+    console.log(0);
+  }
+</script>
 
-<script id="ch0105/33"></script>
+<script id="ch0105/30">
+  // 输入两个正整数 m 和 k，其中1 < m < 100000，1 < k < 5 ，判断 m 能否被19整除，且恰好含有k个3，如果满足条件，则输出YES，否则，输出NO。
+  let m = Number(prompt('正整数 m '));
+  let k = Number(prompt('正整数 k'));
+  let arr = String(m).split('');
 
-<script id="ch0105/34"></script>
+  if (m % 19 == 0) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] == 3) {
+        k--;
+        if (i == (arr.length - 1)) {
+          if (k == 0) {
+            console.log('YES');
+          } else {
+            console.log('NO');
+          }
+        }
+      }
+    }
+  } else {
+    console.log('NO');
+  }
+</script>
 
-<script id="ch0105/35"></script>
+<script id="ch0105/31">
+  // 假设有N盏灯(N为不大于5000的正整数)，从1到N按顺序依次编号，初始时全部处于开启状态；有M个人(M为不大于N的正整数)也从1到M依次编号。
+  let N = Number(prompt('正整数 N '));
+  let M = Number(prompt('正整数 M '));
+  let arr = []; // false关闭，true 打开
+  for (let i = 0; i < N; i++) {
+    arr[i] = true;
 
-<script id="ch0105/36"></script>
+  }
 
-<script id="ch0105/37"></script>
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < M; j++) {
+
+      if ((j + 1) % (i + 1) == 0) {
+        arr[j] = !arr[j];
+      }
+    }
+
+  }
+
+  for (let i = 0; i < N; i++) {
+    if (arr[i] == true) {
+      arr[i] = '';
+    } else if (arr[i] == false) {
+      arr[i] = i + 1;
+    }
+
+  }
+
+  console.log(arr.join('').split('').join(','));
+</script>
+
+<script id="ch0105/32">
+  // 有一个分数序列 q1 / p1, q2 / p2, q3 / p3, q4 / p4, q5 / p5,.... , 其中qi + 1= qi + pi, pi + 1=qi, p1 = 1, q1 = 2。
+  // 比如这个序列前6项分别是2 / 1, 3 / 2, 5 / 3, 8 / 5, 13 / 8, 21 / 13。求这个分数序列的前n项之和。
+  let arrp = [1];
+  let arrq = [2];
+  let n = Number(prompt('正整数 n '));
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    arrq[i] = arrp[i - 1] + arrq[i - 1];
+    arrp[i] = arrq[i] - 1;
+    sum = sum + (arrq[i - 1] / arrp[i - 1])
+  }
+  console.log(sum.toFixed(4));
+</script>
+
+<script id="ch0105/33">
+  // 编写程序，输入n的值，求 1/1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 + 1/7 - 1/8 + ... + (-1)n-1·1/n 的值。
+  let n = Number(prompt('正整数 n '));
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum = sum + ((-1) ** (i - 1)) * (1 / i)
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/34">
+  // 给定正整数n，求不大于n的正整数的阶乘的和（即求1!+2!+3!+...+n!）
+  let n = Number(prompt('正整数 n '));
+  let sum = 0;
+  let res = 1;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      res = res * j;
+
+    }
+    sum = sum + res;
+    res = 1;
+  }
+  console.log(sum);
+</script>
+
+<script id="ch0105/35">
+  // 利用公式e = 1 + 1/1! + 1/2! + 1/3! + ... + 1/n! 求e 。
+  let n = Number(prompt('正整数 n '));
+  let sum = 1;
+  let res = 1;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      res = res * j;
+    }
+    sum = sum + 1 / res;
+    res = 1;
+  }
+  console.log(sum.toFixed(10));
+</script>
+
+<script id="ch0105/36">
+  // 假定多项式的形式为xn+xn-1+…+x2+x+1，请计算给定单精度浮点数x和正整数n值的情况下这个多项式的值。
+  let x = Number(prompt('浮点数x'));
+  let n = Number(prompt('正整数 n '));
+
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
+    sum = sum + x ** i
+  }
+  console.log(sum.toFixed(2));
+</script>
+
+<script id="ch0105/37">
+
+</script>
 
 <script id="ch0105/38"></script>
 
-<script id="ch0105/39"></script>
+<script id="ch0105/39">
+  // 一个正整数,如果它能被7整除,或者它的十进制表示法中某一位上的数字为7,则称其为与7相关的数.现求所有小于等于n(n < 100)的与7无关的正整数的平方和.
+  let n = Number(prompt('正整数 n '));
+  let arr = [];
+  let arr7 = [];
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    arr7 = String(i).split('');
+    console.log(i);
+    for (let j = 0; j < arr7.length; j++) {
+      if (arr7[j] == 7 || i % 7 == 0) {
+        break;
+      }
+      if (j >= (arr7.length - 1)) {
+        sum = sum + i ** 2
+      }
+    }
+  }
+  console.log(sum);
+</script>
 
 <script id="ch0105/40"></script>
 
@@ -958,7 +1184,9 @@
 
 <script id="ch0105/42"></script>
 
-<script id="ch0105/43"></script>
+<script id="ch0105/43">
+
+</script>
 
 <script id="ch0105/44">
   // 输入一个正整数n，求第n小的质数。
@@ -975,8 +1203,6 @@
         if (j > (i - 2)) {
           arr[num] = i;
           num++;
-        } else {
-          continue;
         }
       }
     }
@@ -1000,7 +1226,6 @@
       } else {
         money = money + i;
         day++;
-
       }
     }
 
