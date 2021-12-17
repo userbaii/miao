@@ -1192,7 +1192,7 @@
   let n = Number(prompt('输入一个正整数n'));
   let arr = [2];
   let num = 1;
-  for (let i = 3; i < 10000; i++) {
+  for (let i = 3; ; i++) {
     for (let j = 2; j <= i; j++) {
       if (i % j == 0) {
         break;
@@ -1202,6 +1202,9 @@
           num++;
         }
       }
+    }
+    if (num >= (n - 1)) {
+      break;
     }
   }
   console.log(arr[n - 1]);
