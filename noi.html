@@ -1165,11 +1165,42 @@
 </script>
 
 <script id="ch0105/37">
+  let M = Number(prompt('体力最大值M'));
+  let N = Number(prompt('战斗力N'));
+  let n = N;  //初始战斗力
+  let X = Number(prompt('能量元素X个 '));
+  let m = 0;
+  for (let i = 0; X >= 0; i++) {
+
+
+    x = Math.ceil(M / n); //使用x个能量元素
+    X = X - x;
+    m = M;
+    if (X >= 0) {
+
+      for (let j = 0; m - n >= 0; j++) {
+        m = m - n;
+        n++;
+
+      }
+    }
+  }
+
+  console.log(n);
+
 
 </script>
 
 <script id="ch0105/38">
-
+  let n = Number(prompt('正整数 n '));
+  let arr = [];
+  let arr1 = [];
+  for (let i = 0; i <= n; i++) {
+    arr[i] = Number(prompt('输入第' + (n - i) + '幂次的系数'))
+    arr1[i] = arr[i] * (n - i);
+  }
+  arr1.pop();
+  console.log(arr1.join(' '));
 </script>
 
 <script id="ch0105/39">
@@ -1296,7 +1327,7 @@
         }
       }
     }
-    if (num >= (n - 1)) {
+    if (num == (n)) {
       break;
     }
   }
