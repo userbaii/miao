@@ -50,4 +50,17 @@ var userbaii = {
     }
     return res;
   },
+  fill: function (array, value, start = 0, end = array.length) {
+    for (let i = start; i < end; i++) {
+      array[i] = value;
+    }
+    return array;
+  },
+
+  isBoolean: function (value) {
+    if (value === true || value === false) {
+      return true;
+    }
+    return false;
+  },
 }
