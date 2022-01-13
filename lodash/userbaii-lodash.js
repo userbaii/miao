@@ -56,6 +56,31 @@ var userbaii = {
     }
     return array;
   },
+  head: function (array) {
+    return array[0]
+  },
+  initial: function (array) {
+    if (array.length < 1) {
+      return [];
+    };
+    array.length--;
+    return array;
+  },
+  join: function (array, separator = ',') {
+    let str = ''
+    for (let i = 0; i < array.length; i++) {
+      str = str + array[i] + separator;
+    }
+    return str;
+  },
+  reverse: function (array) {
+    let result = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+      result[array.length - 1 - i] = array[i];
+    }
+    array = result;
+    return array;
+  },
 
   isBoolean: function (value) {
     if (value === true || value === false) {
@@ -63,4 +88,20 @@ var userbaii = {
     }
     return false;
   },
+  max: function (array) {
+    let result = array[0];
+    for (let i = 1; i < array.length; i++) {
+      if (array[i] > result) {
+        result = array[i];
+      }
+    }
+    return result;
+  },
+  sum: function (array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum;
+  }
 }
